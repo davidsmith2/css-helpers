@@ -2,19 +2,23 @@ module.exports = function(grunt){
 
 	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
+	var lang = grunt.option('lang') || 'sass';
+
+	var watchFiles = (lang === 'sass') ? ['*.scss', 'helpers/*.scss'] : ['*.less', 'helpers/*.less'];
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
 		watch: {
 			css: {
-				files: ['*.scss'],
+				files: [watchFiles],
 				tasks: ['build']
 			}
 		},
 		cssmin: {
 			build: {
-				src: 'helpers.css',
-				dest: 'helpers.min.css'
+				src: './helpers.css',
+				dest: './helpers.min.css'
 			}
 		},
 		sass: {
@@ -23,10 +27,20 @@ module.exports = function(grunt){
 					'helpers.css': 'helpers.scss'
 				}
 			}
+		},
+		less: {
+			development: {
+				options: {
+					paths: ['./', './helpers']
+				},
+				files: {
+					'helpers.css': 'helpers.less'
+				}
+			}
 		}
 	});
 
 	grunt.registerTask('default', ['build','watch']);
-	grunt.registerTask('build',  ['sass', 'cssmin']);
+	grunt.registerTask('build',  [lang, 'cssmin']);
 
 };
