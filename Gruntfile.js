@@ -1,9 +1,7 @@
 module.exports = function(grunt){
-
-	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
-
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     sass: {
       build: {
         files: {
@@ -32,23 +30,21 @@ module.exports = function(grunt){
     watch: {
       sass: {
         files: [
-          'src/sass/*.scss',
-          'src/sass/**/*.scss'
+        'src/sass/*.scss',
+        'src/sass/**/*.scss'
         ],
         tasks: ['build-sass']
       },
       less: {
         files: [
-          'src/less/*.less',
-          'src/less/**/*.less'
+        'src/less/*.less',
+        'src/less/**/*.less'
         ],
         tasks: ['build-less']
       }
     },
-	});
-
-	grunt.registerTask('default', ['build-sass','build-less','watch']);
-	grunt.registerTask('build-sass',  ['sass','exec:minsass']);
+  });
+  grunt.registerTask('default', ['build-sass','build-less','watch']);
+  grunt.registerTask('build-sass',  ['sass','exec:minsass']);
   grunt.registerTask('build-less',  ['less','exec:minless']);
-
 };
