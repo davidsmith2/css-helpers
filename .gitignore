@@ -6,6 +6,3 @@ node_modules
 *.map
 *.swp
 .sublime-grunt.cache
-
-helpers.css
-helpers.min.css
