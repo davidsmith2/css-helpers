@@ -44,11 +44,11 @@ module.exports = function(grunt){
       }
     },
     exec: {
-      minsass: {
-        cmd: './node_modules/clean-css/bin/cleancss -o dist/sass/helpers.min.css dist/sass/helpers.css'
+      sass: {
+        cmd: 'cleancss -o dist/sass/helpers.min.css dist/sass/helpers.css'
       },
-      minless: {
-        cmd: './node_modules/clean-css/bin/cleancss -o dist/less/helpers.min.css dist/less/helpers.css'
+      less: {
+        cmd: 'cleancss -o dist/less/helpers.min.css dist/less/helpers.css'
       }
     },
     watch: {
@@ -76,6 +76,6 @@ module.exports = function(grunt){
     }
   });
   grunt.registerTask('default', ['build-sass','build-less','watch']);
-  grunt.registerTask('build-sass',  ['sass','replace:sass','exec:minsass']);
-  grunt.registerTask('build-less',  ['less','exec:minless']);
+  grunt.registerTask('build-sass',  ['sass','exec:sass']);
+  grunt.registerTask('build-less',  ['less','exec:less']);
 };
