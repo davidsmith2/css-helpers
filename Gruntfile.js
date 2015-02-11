@@ -65,6 +65,13 @@ module.exports = function(grunt){
           'src/less/**/*.less'
         ],
         tasks: ['build-less']
+      },
+      css: {
+        files: [
+          'src/css/*.css',
+          'src/css/**/*.css'
+        ],
+        tasks: ['build-sass','build-less']
       }
     }
   });

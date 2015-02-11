@@ -1,6 +1,6 @@
-//
-// Width && Height
-//
+/*
+   Width && Height
+*/
 
 .fit              { max-width: 100%; }
 .half-width       { width: 50% }

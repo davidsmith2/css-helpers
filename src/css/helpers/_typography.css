@@ -1,15 +1,15 @@
-//
-// Typography
-//
+/*
+  Typography
+*/
 
 .bold     { font-weight: bold; }
 .regular  { font-weight: normal; }
 .italic   { font-style: italic; }
 
 
-//
-// Text Controlls
-//
+/*
+   Text Controlls
+*/
 
 .truncate {
   white-space: nowrap;
