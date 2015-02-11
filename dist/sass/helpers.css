@@ -524,7 +524,7 @@
 }
 
 /* line 10, ../../src/sass/helpers/_padding.scss */
-.padding-top-halve {
+.padding-top-half {
   padding-top: 0.5em;
 }
 
@@ -559,7 +559,7 @@
 }
 
 /* line 22, ../../src/sass/helpers/_padding.scss */
-.padding-bottom-halve {
+.padding-bottom-half {
   padding-bottom: 0.5em;
 }
 
@@ -594,7 +594,7 @@
 }
 
 /* line 34, ../../src/sass/helpers/_padding.scss */
-.padding-right-halve {
+.padding-right-half {
   padding-right: 0.5em;
 }
 
@@ -629,7 +629,7 @@
 }
 
 /* line 45, ../../src/sass/helpers/_padding.scss */
-.padding-left-halve {
+.padding-left-half {
   padding-left: 0.5em;
 }
 
@@ -664,7 +664,7 @@
 }
 
 /* line 57, ../../src/sass/helpers/_padding.scss */
-.padding-halve {
+.padding-half {
   padding: 0.5em;
 }
 
