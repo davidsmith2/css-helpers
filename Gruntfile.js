@@ -2,13 +2,15 @@ module.exports = function(grunt){
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    sass: {
+    compass: {
       dist: {
         options: {
-          style: 'expanded'
-        },
-        files: {
-          'dist/sass/helpers.css': 'src/sass/helpers.scss'
+          sassDir: 'src/sass',
+          cssDir: 'dist/sass',
+          outputStyle: 'expanded',
+          sourcemap: true,
+          require: 'sass-css-importer',
+          debugInfo: false
         }
       }
     },
@@ -76,6 +78,6 @@ module.exports = function(grunt){
     }
   });
   grunt.registerTask('default', ['build-sass','build-less','watch']);
-  grunt.registerTask('build-sass',  ['sass','exec:sass']);
+  grunt.registerTask('build-sass',  ['compass','exec:sass']);
   grunt.registerTask('build-less',  ['less','exec:less']);
 };

@@ -2,22 +2,22 @@
 @import 'functions';
 
 
-@import 'helpers/float';
+@import 'CSS:../css/helpers/float';
 @import 'helpers/clearfix';
-@import 'helpers/z-index';
-@import 'helpers/positions';
+@import 'CSS:../css/helpers/z-index';
+@import 'CSS:../css/helpers/positions';
 
 
-@import 'helpers/align';
-@import 'helpers/width-height';
-@import 'helpers/display';
+@import 'CSS:../css/helpers/align';
+@import 'CSS:../css/helpers/width-height';
+@import 'CSS:../css/helpers/display';
 
 
 @import 'helpers/colors';
 @import 'helpers/backgrounds';
 
 
-@import 'helpers/typography';
+@import 'CSS:../css/helpers/typography';
 @import 'helpers/lists';
 @import 'helpers/border';
 @import 'helpers/visibility';
