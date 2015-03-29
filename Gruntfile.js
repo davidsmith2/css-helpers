@@ -2,82 +2,34 @@ module.exports = function(grunt){
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    compass: {
-      dist: {
-        options: {
-          sassDir: 'src/sass',
-          cssDir: 'dist/sass',
-          outputStyle: 'expanded',
-          sourcemap: true,
-          require: 'sass-css-importer',
-          debugInfo: false
-        }
-      }
-    },
     less: {
       dist: {
         options: {
-          paths: ['src/less'],
+          paths: ['src'],
           sourceMap: true,
-          sourceMapFilename: 'dist/less/helpers.css.map',
+          sourceMapFilename: 'dist/helpers.css.map',
           sourceMapURL: 'helpers.css.map'
         },
         files: {
-          'dist/less/helpers.css': 'src/less/helpers.less'
+          'dist/helpers.css': 'src/helpers.less'
         }
       }
     },
-    replace: {
-      sass: {
-        src: ['dist/sass/helpers.css'],
-        overwrite: true,
-        replacements: [
-          {
-            from: /^\n/gm,
-            to: function () {
-              return;
-            }
-          },
-          {
-            from: /(,)\s/gm,
-            to: '$1\n'
-          }
-        ]
-      }
-    },
     exec: {
-      sass: {
-        cmd: 'cleancss -o dist/sass/helpers.min.css dist/sass/helpers.css'
-      },
       less: {
-        cmd: 'cleancss -o dist/less/helpers.min.css dist/less/helpers.css'
+        cmd: 'cleancss -o dist/helpers.min.css dist/helpers.css'
       }
     },
     watch: {
-      sass: {
-        files: [
-          'src/sass/*.scss',
-          'src/sass/**/*.scss'
-        ],
-        tasks: ['build-sass']
-      },
       less: {
         files: [
-          'src/less/*.less',
-          'src/less/**/*.less'
+          'src/*.less',
+          'src/**/*.less'
         ],
-        tasks: ['build-less']
-      },
-      css: {
-        files: [
-          'src/css/*.css',
-          'src/css/**/*.css'
-        ],
-        tasks: ['build-sass','build-less']
+        tasks: ['build']
       }
     }
   });
-  grunt.registerTask('default', ['build-sass','build-less','watch']);
-  grunt.registerTask('build-sass',  ['compass','exec:sass']);
-  grunt.registerTask('build-less',  ['less','exec:less']);
+  grunt.registerTask('default', ['build','watch']);
+  grunt.registerTask('build',  ['less','exec:less']);
 };
