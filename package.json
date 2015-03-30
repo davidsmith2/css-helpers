@@ -1,6 +1,6 @@
 {
   "name": "less-helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A LESS port of Ahmad Ajmi's CSS helpers library",
   "author": "David Smith <davidsmith2@gmail.com>",
   "repository": {
