@@ -1,6 +1,6 @@
 {
   "name": "less-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A LESS port of Ahmad Ajmi's CSS helpers library",
   "author": "David Smith <davidsmith2@gmail.com>",
   "repository": {
@@ -11,9 +11,9 @@
     "url": "https://github.com/davidsmith2/less-helpers/issues"
   },
   "keywords": [
-    "CSS",
-    "LESS",
-    "DRY"
+    "css",
+    "less",
+    "dry"
   ],
   "devDependencies": {
     "clean-css": "^3.0.10",
