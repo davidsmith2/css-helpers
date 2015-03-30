@@ -1,7 +1,7 @@
 {
   "name": "less-helpers",
   "version": "0.0.3",
-  "description": "A small library of CSS helper classes that can be used to reduce the amount of CSS that can be added every time you need to add a new module or elements. A LESS-based version of Ahmad Ajmi's SASS-based CSS Helpers library.",
+  "description": "A LESS port of Ahmad Ajmi's CSS helpers library",
   "author": "David Smith <davidsmith2@gmail.com>",
   "repository": {
     "type": "git",
@@ -11,9 +11,9 @@
     "url": "https://github.com/davidsmith2/less-helpers/issues"
   },
   "keywords": [
-    "css",
-    "less",
-    "dry"
+    "CSS",
+    "LESS",
+    "DRY"
   ],
   "devDependencies": {
     "clean-css": "^3.0.10",

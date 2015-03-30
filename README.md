@@ -1,4 +1,4 @@
-A small library of CSS helper classes that can be used to reduce the amount of CSS that can be added every time you need to add a new module or elements. A LESS-based version of Ahmad Ajmi's SASS-based CSS Helpers library.
+A LESS port of Ahmad Ajmi's CSS helpers library.
 
 ### Add it to your project
 
@@ -23,6 +23,3 @@ Run `grunt` to build the code and start watching files.
 ```
 grunt
 ```
-
-### Using
-Read more about the idea and using the classes by reading [Using Helper Classes to DRY and Scale CSS](http://www.sitepoint.com/using-helper-classes-dry-scale-css/)
